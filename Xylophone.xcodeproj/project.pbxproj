@@ -19,6 +19,7 @@
 		63C019F31C58E4AD001F4187 /* note5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019EC1C58E4AD001F4187 /* note5.wav */; };
 		63C019F41C58E4AD001F4187 /* note6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019ED1C58E4AD001F4187 /* note6.wav */; };
 		63C019F51C58E4AD001F4187 /* note7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019EE1C58E4AD001F4187 /* note7.wav */; };
+		730C6E2F212AF6070057F509 /* ThreeKeys.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730C6E2E212AF6060057F509 /* ThreeKeys.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		63C019EC1C58E4AD001F4187 /* note5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note5.wav; sourceTree = "<group>"; };
 		63C019ED1C58E4AD001F4187 /* note6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note6.wav; sourceTree = "<group>"; };
 		63C019EE1C58E4AD001F4187 /* note7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note7.wav; sourceTree = "<group>"; };
+		730C6E2E212AF6060057F509 /* ThreeKeys.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThreeKeys.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,11 @@
 		6385B12D1C68C76C00E57640 /* Sound Files */ = {
 			isa = PBXGroup;
 			children = (
+				63C019CC1C58DF76001F4187 /* Main.storyboard */,
+				63C019CF1C58DF76001F4187 /* Assets.xcassets */,
 				63C019E81C58E4AD001F4187 /* note1.wav */,
 				63C019E91C58E4AD001F4187 /* note2.wav */,
+				63C019D41C58DF76001F4187 /* Info.plist */,
 				63C019EA1C58E4AD001F4187 /* note3.wav */,
 				63C019EB1C58E4AD001F4187 /* note4.wav */,
 				63C019EC1C58E4AD001F4187 /* note5.wav */,
@@ -84,10 +89,8 @@
 			children = (
 				63C019C81C58DF76001F4187 /* AppDelegate.swift */,
 				63C019CA1C58DF76001F4187 /*  VIewController.swift */,
-				63C019CC1C58DF76001F4187 /* Main.storyboard */,
-				63C019CF1C58DF76001F4187 /* Assets.xcassets */,
+				730C6E2E212AF6060057F509 /* ThreeKeys.storyboard */,
 				63C019D11C58DF76001F4187 /* LaunchScreen.storyboard */,
-				63C019D41C58DF76001F4187 /* Info.plist */,
 				6385B12D1C68C76C00E57640 /* Sound Files */,
 			);
 			path = Xylophone;
@@ -125,7 +128,9 @@
 				TargetAttributes = {
 					63C019C41C58DF76001F4187 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = JWLV9L7TJB;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -161,6 +166,7 @@
 				63C019F51C58E4AD001F4187 /* note7.wav in Resources */,
 				63C019D31C58DF76001F4187 /* LaunchScreen.storyboard in Resources */,
 				63C019D01C58DF76001F4187 /* Assets.xcassets in Resources */,
+				730C6E2F212AF6070057F509 /* ThreeKeys.storyboard in Resources */,
 				63C019CE1C58DF76001F4187 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,10 +306,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JWLV9L7TJB;
 				INFOPLIST_FILE = Xylophone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YourName.Xylophone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.invirtstudios.Xylophone2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -313,10 +323,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JWLV9L7TJB;
 				INFOPLIST_FILE = Xylophone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YourName.Xylophone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.invirtstudios.Xylophone2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;

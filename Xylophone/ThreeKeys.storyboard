@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Three Keys View Controller-->
+        <scene sceneID="A39-EN-dnO">
+            <objects>
+                <viewController id="kfp-8b-vRe" userLabel="Three Keys View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JHA-ep-A4s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNB-p9-bli" userLabel="Rail 2">
+                                <rect key="frame" x="225" y="162" width="54" height="352"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="VlD-gR-31X"/>
+                                    <constraint firstAttribute="height" constant="352" id="qKe-2r-NPQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11Q-cI-H35" userLabel="Rail 1">
+                                <rect key="frame" x="96" y="162" width="54" height="352"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="352" id="p5x-II-Yg1"/>
+                                    <constraint firstAttribute="width" constant="54" id="vxK-5U-cVB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-dD-ssw" userLabel="Key1">
+                                <rect key="frame" x="27" y="181" width="321" height="86"/>
+                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Hnb-63-NDh"/>
+                                    <constraint firstAttribute="width" constant="321" id="wDT-ob-lFj"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKf-AP-AG0" userLabel="Key2">
+                                <rect key="frame" x="42" y="291" width="291" height="86"/>
+                                <color key="backgroundColor" red="0.72916666669999997" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="O4B-Oc-cDw"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="40" minY="40" maxX="40" maxY="40"/>
+                            </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWa-0C-ihi" userLabel="Key3">
+                                <rect key="frame" x="61" y="401" width="253" height="86"/>
+                                <color key="backgroundColor" red="0.46527777780000001" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="253" id="iIQ-Sq-VhV"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="21" minY="21" maxX="21" maxY="21"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sKf-AP-AG0" firstAttribute="centerX" secondItem="hBO-dD-ssw" secondAttribute="centerX" id="F3g-Tz-jUF"/>
+                            <constraint firstItem="sKf-AP-AG0" firstAttribute="height" secondItem="hBO-dD-ssw" secondAttribute="height" id="FJG-xp-V5w"/>
+                            <constraint firstItem="aWa-0C-ihi" firstAttribute="height" secondItem="hBO-dD-ssw" secondAttribute="height" id="FfD-Ta-eKC"/>
+                            <constraint firstItem="sKf-AP-AG0" firstAttribute="top" secondItem="hBO-dD-ssw" secondAttribute="bottom" constant="24" id="JZZ-ag-w0J"/>
+                            <constraint firstItem="11Q-cI-H35" firstAttribute="top" secondItem="JHA-ep-A4s" secondAttribute="top" constant="162" id="Lh6-Ph-scP"/>
+                            <constraint firstItem="hBO-dD-ssw" firstAttribute="top" secondItem="JHA-ep-A4s" secondAttribute="top" constant="181" id="S8z-8V-bzD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hNB-p9-bli" secondAttribute="trailing" constant="80" id="Si4-qu-Z54"/>
+                            <constraint firstItem="hBO-dD-ssw" firstAttribute="centerX" secondItem="JHA-ep-A4s" secondAttribute="centerX" id="VvG-3v-uws"/>
+                            <constraint firstItem="hNB-p9-bli" firstAttribute="top" secondItem="JHA-ep-A4s" secondAttribute="top" constant="162" id="h6P-Z3-OjA"/>
+                            <constraint firstItem="aWa-0C-ihi" firstAttribute="centerX" secondItem="hBO-dD-ssw" secondAttribute="centerX" id="jo1-xC-LoJ"/>
+                            <constraint firstItem="11Q-cI-H35" firstAttribute="leading" secondItem="JHA-ep-A4s" secondAttribute="leadingMargin" constant="80" id="kSl-fl-OLq"/>
+                            <constraint firstItem="aWa-0C-ihi" firstAttribute="top" secondItem="sKf-AP-AG0" secondAttribute="bottom" constant="24" id="qjE-OI-zBY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ngR-3U-htU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVy-Fm-Jsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="15.742128935532236"/>
+        </scene>
+    </scenes>
+</document>
