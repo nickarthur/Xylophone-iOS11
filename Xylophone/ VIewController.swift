@@ -7,46 +7,43 @@
 //
 
 import UIKit
-import AVFoundation
+import AudioToolbox
 
 class ViewController: UIViewController{
     
-    var audioPlayer: AVPlayer?
-    
+    var sounds : [SystemSoundID] = [1, 2, 3, 4, 5, 6, 7]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaultNote: URL = Bundle.main.url(forResource: "note1", withExtension: "wav")!
-        prepareToPlay(defaultNote)
+        for index in 0...sounds.count-1 {
+            let fileName : String = "note\(sounds[index])"
+            
+            if let soundURL = Bundle.main.url(forResource: fileName, withExtension: "wav") {
+                AudioServicesCreateSystemSoundID(soundURL as CFURL, &sounds[index])
+            }
+        }
     }
     
     @IBAction func notePressed(_ sender: UIButton) {
         sender.showsTouchWhenHighlighted = true
-
-        guard let url = Bundle.main.url(forResource: "note\(sender.tag)", withExtension: "wav")
-            else {return}
-
-        audioPlayer?.replaceCurrentItem(with: AVPlayerItem(url: url))
-        audioPlayer?.playImmediately(atRate: 1.0)
+        
+        switch sender.tag {
+        case 1:
+            AudioServicesPlaySystemSound(sounds[0])
+        case 2:
+            AudioServicesPlaySystemSound(sounds[1])
+        case 3:
+            AudioServicesPlaySystemSound(sounds[2])
+        case 4:
+            AudioServicesPlaySystemSound(sounds[3])
+        case 5:
+            AudioServicesPlaySystemSound(sounds[4])
+        case 6:
+            AudioServicesPlaySystemSound(sounds[5])
+        default:
+            AudioServicesPlaySystemSound(sounds[6])
+        }
     }
-    
-    func prepareToPlay(_ url: URL) {
-        // Create asset to be played
-        let asset = AVAsset(url: url)
-        
-        let assetKeys = [
-            "playable",
-            "hasProtectedContent"
-        ]
-        // Create a new AVPlayerItem with the asset and an
-        // array of asset keys to be automatically loaded
-        let playerItem = AVPlayerItem(asset: asset,
-                                  automaticallyLoadedAssetKeys: assetKeys)
-        
-        
-        // Associate the player item with the player
-        audioPlayer = AVPlayer(playerItem: playerItem)
-    }
-    
 }
 

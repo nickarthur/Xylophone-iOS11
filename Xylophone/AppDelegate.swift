@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         // view my splashscreen for a bit
-        print("**** I going to sleep")
+        print("**** I'm going to sleep")
         sleep(3) // sleep 4 3 seconds LOL
         print("**** I awoke!")
         return true
